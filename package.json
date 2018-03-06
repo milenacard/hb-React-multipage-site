@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --config webpack.prod.js",
+    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "lint": "standard"
   },
   "repository": {
     "type": "git",
@@ -27,11 +29,23 @@
     "babel-loader": "^7.1.3",
     "babel-preset-react": "^6.24.1",
     "clean-webpack-plugin": "^0.1.18",
+    "css-loader": "^0.28.10",
+    "extract-text-webpack-plugin": "^3.0.2",
     "html-webpack-plugin": "^3.0.4",
     "node-sass": "^4.7.2",
     "prop-types": "^15.6.1",
-    "webpack": "^4.0.1",
-    "webpack-dev-server": "^3.1.0",
-    "webpack-merge": "^4.1.2"
+    "reset-css": "^2.2.1",
+    "sass-loader": "^6.0.7",
+    "standard-loader": "^6.0.1",
+    "style-loader": "^0.20.2",
+    "stylelint": "^9.1.1",
+    "stylelint-config-recommended-scss": "^3.1.0",
+    "stylelint-scss": "^2.5.0",
+    "stylelint-webpack-plugin": "^0.10.3",
+    "uglifyjs-webpack-plugin": "^1.2.2",
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "^2.11.2",
+    "webpack-merge": "^4.1.2",
+    "webpack-plugin-copy": "^1.0.1"
   }
 }
