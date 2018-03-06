@@ -16,7 +16,7 @@ module.exports = {
         enforce: 'pre',
         test: /\.js$/,
         loader: 'standard-loader',
-        exclude: /(node_modules|bower_components)/,
+        exclude: /(node_modules)/,
         options: {
           error: false,
           snazzy: true

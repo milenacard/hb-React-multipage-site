@@ -1,19 +1,16 @@
 import React, { Fragment, Component } from 'react'
-import Welcome from './components/welcome.js'
+import Welcome from './components/Welcome.js'
 
 export default class App extends Component {
   constructor (props) {
     super(props)
-
-    this.state = {
-      data: props.data
-    }
+    this.data = props.data
   }
 
   render () {
     return (
       <Fragment>
-        <Welcome name={this.state.data.name} />
+        <Welcome name={this.data.name} />
       </Fragment>
     )
   }
