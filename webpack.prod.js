@@ -1,6 +1,7 @@
 const webpack = require('webpack')
 const merge = require('webpack-merge')
 const common = require('./webpack.common.js')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
@@ -22,6 +23,7 @@ module.exports = merge(common, {
     ]
   },
   plugins: [
+    new CleanWebpackPlugin(['public']),
     new ExtractTextPlugin('styles.css'),
     new UglifyJSPlugin({
       uglifyOptions: {

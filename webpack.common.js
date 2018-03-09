@@ -1,5 +1,4 @@
 const path = require('path')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const StyleLintPlugin = require('stylelint-webpack-plugin')
 const WebpackPluginCopy = require('webpack-plugin-copy')
@@ -34,7 +33,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(['public']),
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     }),
