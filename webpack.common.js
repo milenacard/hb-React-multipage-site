@@ -1,7 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const StyleLintPlugin = require('stylelint-webpack-plugin')
-const WebpackPluginCopy = require('webpack-plugin-copy')
+// const WebpackPluginCopy = require('webpack-plugin-copy')
 
 module.exports = {
   entry: './src/main.js',
@@ -42,12 +42,12 @@ module.exports = {
       files: '**/*.scss',
       failOnError: false,
       quiet: false
-    }),
+    })/*,
     new WebpackPluginCopy([
       {
         from: 'assets',
         to: 'assets'
       }
-    ])
+    ]) */
   ]
 }

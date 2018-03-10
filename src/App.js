@@ -8,7 +8,7 @@ export default function App (props) {
     <Router>
       <Fragment>
         <Route exact path='/'
-          render={() => <MainNav content={this.props.data.mainNav} />} />
+          render={() => <MainNav data={props.data.mainNav} />} />
       </Fragment>
     </Router>
   )

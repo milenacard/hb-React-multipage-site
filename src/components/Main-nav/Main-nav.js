@@ -1,17 +1,19 @@
 import React, { Component } from 'react'
-import './MainNav.scss'
+import './Main-nav.scss'
 
-export class MainNav extends Component {
+export default class MainNav extends Component {
   constructor (props) {
     super(props)
-    this.data = props.data
+
     this.state = {
       open: false
     }
+
     this.toggle = this.toggle.bind(this)
+    this.data = props.data
   }
 
-  toogle () {
+  toggle () {
     this.setState((prevState) => {
       return {open: !prevState.open}
     })
@@ -19,7 +21,7 @@ export class MainNav extends Component {
 
   render () {
     const activeHamburger = {
-      open: this.state.open ? '' : 'nav-bar__hamburger--clicked'
+      open: this.state.open ? 'nav-bar__hamburger--clicked' : ''
     }
 
     return (
